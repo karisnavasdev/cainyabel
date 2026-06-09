@@ -50,6 +50,7 @@
       </button>
       <ul id="nav-menu" class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#howtobuy">How to Buy</a></li>
         <li><a href="#chart">Chart</a></li>
         <li><a href="#joinus">Join Us</a></li>
@@ -194,6 +195,34 @@
       </div>
     </section>
 
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="comic-star" aria-hidden="true">★</span>
+          <h2>Meme Gallery</h2>
+          <span class="comic-star" aria-hidden="true">★</span>
+        </header>
+        <p class="gallery-desc reveal">Cain, Abel, Jotchua, Esquizo — the stare lives on. Click any meme to enlarge.</p>
+        <div class="gallery-grid reveal stagger">
+          <button type="button" class="gallery-item gallery-tilt-left" aria-label="View meme 1">
+            <img src="meme/1.png" alt="Cainyabel meme 1" loading="lazy" />
+          </button>
+          <button type="button" class="gallery-item" aria-label="View meme 2">
+            <img src="meme/2.png" alt="Cainyabel meme 2" loading="lazy" />
+          </button>
+          <button type="button" class="gallery-item gallery-featured" aria-label="View meme 3">
+            <img src="meme/3.png" alt="Cainyabel meme 3" loading="lazy" />
+          </button>
+          <button type="button" class="gallery-item gallery-tilt-right" aria-label="View meme 4">
+            <img src="meme/4.png" alt="Cainyabel meme 4" loading="lazy" />
+          </button>
+          <button type="button" class="gallery-item" aria-label="View meme 5">
+            <img src="meme/5.png" alt="Cainyabel meme 5" loading="lazy" />
+          </button>
+        </div>
+      </div>
+    </section>
+
     <section id="howtobuy" class="section howtobuy">
       <div class="container">
         <header class="section-head reveal">
@@ -298,6 +327,11 @@
       </div>
     </div>
   </footer>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <button type="button" id="lightbox-close" class="lightbox-close" aria-label="Close gallery image">×</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
 
   <script src="script.js"></script>
 </body>

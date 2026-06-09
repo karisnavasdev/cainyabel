@@ -1,6 +1,6 @@
 (function () {
   const CONFIG = {
-    ca: "YOUR_CONTRACT_ADDRESS_pump",
+    ca: "pumppump",
     ticker: "$CAINYABEL",
     name: "CAINYABEL",
     x: "https://x.com/cainyabels",
@@ -118,6 +118,38 @@
   } else {
     document.querySelectorAll(".reveal, .stagger").forEach((el) => {
       el.classList.add("is-visible");
+    });
+  }
+
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxClose = document.getElementById("lightbox-close");
+
+  if (lightbox && lightboxImg) {
+    galleryItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        const img = item.querySelector("img");
+        if (!img) return;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.hidden = false;
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.hidden = true;
+      lightboxImg.src = "";
+      document.body.style.overflow = "";
+    };
+
+    lightboxClose?.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
     });
   }
 })();
