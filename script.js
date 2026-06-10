@@ -1,6 +1,6 @@
 (function () {
   const CONFIG = {
-    ca: "pumppump",
+    ca: "8HzRWh3zdW7ewhjE16sCowoxeKZZ9hF3TjhCwqVMpump",
     ticker: "$CAINYABEL",
     name: "CAINYABEL",
     x: "https://x.com/cainyabels",
